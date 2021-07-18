@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a117ab7b0e982144811c5b96e871a26, type: 3}
+  m_Name: SCO_HeavyBandit
+  m_EditorClassIdentifier: 
+  Hp: 1
+  attack: 0
+  runSpeed: 8
+  prefab: {fileID: 10908374624195618, guid: fcaff55dd43d6714c933b0b81b56f180, type: 3}
