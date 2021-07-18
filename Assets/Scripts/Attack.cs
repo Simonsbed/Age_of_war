@@ -23,7 +23,8 @@ public class Attack
         attackType = AttackType.NONE;
      
     }
-
+   
+	
 
     public Attack(float _damage)
     {
