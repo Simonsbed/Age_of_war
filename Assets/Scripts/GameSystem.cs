@@ -10,13 +10,60 @@ public enum Team
     NONE = 0
 }
 
+public enum STAGESTATE
+{
+    RUNNING,
+    PAUSE,
+    LEVELUP,
+    STOP,
+    ENDING,
+    REVIVE,
+    NONE
+}
+
 
 public class GameSystem : MonoBehaviour
 {
     [SerializeField]
     protected float Hp;
+    private float inGameTime;
+    public float curGameTime;
+    publicint dealthMonsterCount;
+    public bool isrevive;
+    public float inGameGold;
+    public STAGESTATE stageState;
 
-   
+    IEnumerator RunningStage()
+    {
+        while(true){
+            switch (stageState) {
+                case STAGESTATE.RUNNING:
+                inGameTime += Time.deltaTime;
+                break;
+                case STAGESTATE.LEVELUP:
+                //LEVEL UP
+                break;
+                case STAGESTATE.PAUSE:
+                Time.timeScale = 0;
+                break;
+                case STAGESTATE.STOP:
+                Time.timeScale = 1;
+                case STAGESTATE.REVIVE:
+                //Revive
+                break;
+            }
+        }
+    }
+
+    public void SetStageState(STAGESTATE stageState){
+        if (stageState == STAGESTATE.RUNNING || stageState == STAGESTATE.STOP){
+            Time.timeScale = 1f;
+        } else{
+            Time.timeScale = 0f;
+        }
+        this.stageState = stageState
+    }
+
 
     public bool ReduceHp(float amount)
     {

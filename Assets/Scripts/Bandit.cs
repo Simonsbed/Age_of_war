@@ -10,14 +10,10 @@ public enum BanditState
 	RUN,
 	HURT,
 	DEATH,
-	PAUSE,
-	REVIVE,
 	NONE
 }
 public class Bandit : GameSystem
 {
-	private float inGameTime;
-	public float curGameTime;
 	public List<GameObject> FoundObject;
 	public float attack;
 	public float runSpeed = 8f;
@@ -31,7 +27,7 @@ public class Bandit : GameSystem
 
 	public BanditState state = BanditState.NONE;
 
-// FSM
+// 
 	IEnumerator StateCheck()
 	{
 
@@ -41,7 +37,6 @@ public class Bandit : GameSystem
 			switch (state)
 			{
 				case BanditState.ATTACK:
-				inGameTime += Time.deltaTime;
 					Attack();
 					break;
 				case BanditState.IDLE:
@@ -54,9 +49,6 @@ public class Bandit : GameSystem
 					break;
 				case BanditState.DEATH:
 					Death();
-					break;
-				case BanditState.Pause:
-				Time.timeScale = 1; 
 					break;
 				default:
 					break;
