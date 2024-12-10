@@ -24,8 +24,6 @@ public class Attack
      
     }
    
-	
-
     public Attack(float _damage)
     {
         damage = _damage;

@@ -27,8 +27,7 @@ public class Bandit : GameSystem
 
 	public BanditState state = BanditState.NONE;
 
-
-
+// FSM
 	IEnumerator StateCheck()
 	{
 
@@ -150,7 +149,7 @@ public class Bandit : GameSystem
 					float Distance = Vector2.Distance(gameObject.transform.position, bandit.transform.position);
 				if (Distance < shortDis)
 				{
-					// Àü¿¡ ÀÖ´ø °ªÀ» ±â¾ïÇÑ´Ù.
+					// ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 					shortestindex = i;
 
 					shortDis = Distance;
@@ -171,7 +170,7 @@ public class Bandit : GameSystem
 
 		
 	}
-	// ²°´Ù°¡ ÄÑÁ®¼­ ½ÇÇàÀÌ µÇ´Â °Í 
+	// ï¿½ï¿½ï¿½Ù°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½ï¿½ 
 	void OnEnabled()
 	{
 		state = BanditState.RUN;
