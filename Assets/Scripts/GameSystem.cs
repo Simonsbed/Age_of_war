@@ -64,6 +64,27 @@ public class GameSystem : MonoBehaviour
         this.stageState = stageState
     }
 
+    public void EndGame() {
+        stageState = STAGESTATE.ENDING;
+    }
+
+    public void GotoMainScene() {
+        SetStageState(STAGESTATE.STOP);
+    }
+
+    public void Start() {
+        isrevive = false;
+        StartCoroutine(RunningStage());
+    }
+
+    public void ChangeStageState(string stageState) {
+        SetStageState((STAGESTATE)Enum.Parse(typeof(STAGESTATE), stageState));
+    }
+
+    public void Revive() {
+        stageState = STAGESTATE.REVIVE;
+    }
+
 
     public bool ReduceHp(float amount)
     {
