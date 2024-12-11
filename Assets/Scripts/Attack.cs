@@ -37,4 +37,10 @@ public class Attack
         attackType = type;
 	}
 
+    public SkillAttack() {
+        // 스킬 데미지 
+        damage = 0;
+        attackType = AttackType.SKILL;
+    }
+
 }
