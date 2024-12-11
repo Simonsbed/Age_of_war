@@ -23,9 +23,11 @@ public class EnemySpawnManager : SpawnManager
 		GameObject spawnObject =
 		   Instantiate(prefabList[1], transform.position, Quaternion.identity);
 		Setting(spawnObject.GetComponent<Bandit>());
+	}
 
-
-
+	void AutoSpawn(index) {
+		GameObject spawnObject = Instantiate(prefabList[index], transform.position, Quaternion.identity);
+		Setting(spawnObject.GetComponent<Bandit>());
 	}
 
 	private void Start()
@@ -35,7 +37,7 @@ public class EnemySpawnManager : SpawnManager
 
 	private void Update()
 	{
-	  // Á¤¸® ÇÊ¿äÇÔ//
+	  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½//
 	  
 	}
 
