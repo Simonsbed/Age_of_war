@@ -12,7 +12,8 @@ public class LightBandit : Bandit
     public int hpLevel;
     public int speedLevel;
     public int speedLevel;
-    public int coolDownLevel;
+    public int coolDownLevel;  
+    //주석
     public float getExpLevel;
     public int getGoldLevel;
 
