@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class GameSystem : MonoBehaviour
     protected float Hp;
     private float inGameTime;
     public float curGameTime;
-    publicint dealthMonsterCount;
+    public int dealthMonsterCount;
     public bool isrevive;
     public float inGameGold;
     public STAGESTATE stageState;
@@ -48,6 +49,7 @@ public class GameSystem : MonoBehaviour
                 break;
                 case STAGESTATE.STOP:
                 Time.timeScale = 1;
+                break;
                 case STAGESTATE.REVIVE:
                 //Revive
                 break;
@@ -61,7 +63,7 @@ public class GameSystem : MonoBehaviour
         } else{
             Time.timeScale = 0f;
         }
-        this.stageState = stageState
+        this.stageState = stageState;
     }
 
     public void EndGame() {

@@ -25,7 +25,7 @@ public class EnemySpawnManager : SpawnManager
 		Setting(spawnObject.GetComponent<Bandit>());
 	}
 
-	void AutoSpawn(index) {
+	void AutoSpawn(int index) {
 		GameObject spawnObject = Instantiate(prefabList[index], transform.position, Quaternion.identity);
 		Setting(spawnObject.GetComponent<Bandit>());
 	}

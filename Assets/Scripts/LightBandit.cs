@@ -11,7 +11,6 @@ public class LightBandit : Bandit
     public int attLevel;
     public int hpLevel;
     public int speedLevel;
-    public int speedLevel;
     public int coolDownLevel;  
     //주석
     public float getExpLevel;
@@ -24,14 +23,15 @@ public class LightBandit : Bandit
         }
         PlayerPrefs.SetFloat("MaxExp", maxExp);
         PlayerPrefs.SetFloat("CurExp", curExp);
+    }
 
-        public void LevelUp(){
-            level += 1;
-            maxExp *= 2;
-            curExp = 0;
-            PlayerPrefs.SetInt("Level", level);
-            PlayerPrefs.SetInt("MaxExp", maxExp);
-            PlayerPrefs.SetInt("CurExp", curExp);
-        }
+    public void LevelUp()
+    {
+        level += 1;
+        maxExp *= 2;
+        curExp = 0;
+        PlayerPrefs.SetInt("Level", level);
+        PlayerPrefs.SetFloat("MaxExp", maxExp);
+        PlayerPrefs.SetFloat("CurExp", curExp);
     }
 }

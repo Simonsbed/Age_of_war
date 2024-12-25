@@ -87,7 +87,6 @@ public class Bandit : GameSystem
 		
 		ani.SetTrigger("Hurt");
 		Attack newAttack = new Attack();
-		newAttack.Attack();
 	}
 
 	void Idle()
